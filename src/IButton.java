@@ -1,8 +1,8 @@
 public interface IButton {
 
-    Button whenPressed(Boolean button);
-    Button and(Boolean button);
-    Button or(Boolean button);
+    Button whenPressed(boolean button);
+    Button and(boolean button);
+    Button or(boolean button);
     void then(Runnable runnable);
 
 }

@@ -12,21 +12,21 @@ public class Button implements IButton {
     }
 
     @Override
-    public Button whenPressed(Boolean button) {
+    public Button whenPressed(boolean button) {
         this.buttonList.add(button);
         this.button = button;
         return this;
     }
 
     @Override
-    public Button and(Boolean button) {
+    public Button and(boolean button) {
         this.buttonList.add(button);
         this.button = buttonList.stream().allMatch(Boolean::booleanValue);
         return this;
     }
 
     @Override
-    public Button or(Boolean button) {
+    public Button or(boolean button) {
         this.buttonList.add(button);
         this.button = buttonList.stream().anyMatch(Boolean::booleanValue);
         return this;
