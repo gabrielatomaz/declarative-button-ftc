@@ -22,11 +22,11 @@ public class Main {
                 lastUpdateTime = currentTime;
             }
 
-            Button.whenPressed(smartController.getButtonA())
+            ButtonUtils.whenPressed(smartController.getButtonA())
                     .and(smartController.getButtonB())
                     .then(subsystemAnd::execute);
 
-            Button.whenPressed(smartController.getButtonA())
+            ButtonUtils.whenPressed(smartController.getButtonA())
                     .or(smartController.getButtonX())
                     .then(subsystemOr::execute);
        }
