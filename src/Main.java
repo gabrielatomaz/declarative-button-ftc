@@ -2,7 +2,6 @@ public class Main {
     public static void main(String[] args) {
         var gamePad = new Gamepad();
         var smartController = new SmartController(gamePad);
-        var button = new Button();
         var subsystemAnd = new Subsystem("AND SAMPLE");
         var subsystemOr = new Subsystem("OR SAMPLE");
 
@@ -23,11 +22,11 @@ public class Main {
                 lastUpdateTime = currentTime;
             }
 
-            button.whenPressed(smartController.getButtonA())
+            Button.whenPressed(smartController.getButtonA())
                     .and(smartController.getButtonB())
                     .then(subsystemAnd::execute);
 
-            button.whenPressed(smartController.getButtonA())
+            Button.whenPressed(smartController.getButtonA())
                     .or(smartController.getButtonX())
                     .then(subsystemOr::execute);
        }
