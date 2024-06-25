@@ -16,10 +16,10 @@ This project demonstrates a base implementation of declarative button utilities 
    cd declarative-button-ftc
 2. **Clone the repository:**
    ```bash
-   javac Main.java
+   javac src/*.java
 3. **Clone the repository:**
    ```bash
-   java Main
+   java -cp src Main
 
  ## 📘 Usage
 
